@@ -15,7 +15,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
-
+/**
+ * Creado por Pablo Bascuñana Saiz el 30/12/14.
+ */
 public class MainActivity extends ActionBarActivity {
 
     private Button mImageButton, mProgressButton;
@@ -40,7 +42,7 @@ public class MainActivity extends ActionBarActivity {
         mProgressButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchBarDialog();
+                launchProgressDialog();
             }
         });
     }
@@ -96,7 +98,7 @@ public class MainActivity extends ActionBarActivity {
             }
         }).start();
     }
-    public void launchBarDialog() {
+    public void launchProgressDialog() {
         mProgressDialog = new ProgressDialog(MainActivity.this);
         mProgressDialog.setTitle("Simulando descarga ...");
         mProgressDialog.setMessage("Descarga en progreso ...");
